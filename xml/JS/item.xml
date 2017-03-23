@@ -1,0 +1,12 @@
+<root>
+  <element>
+    <child1>content</child1>
+    <child2>content</child2>
+    <child3>content</child3>
+  </element>
+  <element>
+    <child1>content</child1>
+    <child2>content</child2>
+    <child3>content</child3>
+  </element>
+</root>

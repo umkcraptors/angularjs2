@@ -1,0 +1,28 @@
+ 1) What is a Component?
+
+Sol: A component controls a patch of screen called a view.Component decorator allows you to mark a class as an Angular component and provide additional metadata that determines how the component should be processed, instantiated and used at runtime.
+
+Components are the most basic building block of an UI in an Angular application. An Angular application is a tree of Angular components. Angular components are a subset of directives. Unlike directives, components always have a template and only one component can be instantiated per an element in a template.
+
+2) Where and how are the Controllers and Models defined?
+
+Sol: AngularJS application mainly relies on controllers to control the flow of data in the application. A controller is defined using ng-controller directive. A controller is a JavaScript object containing attributes/properties and functions. Each controller accepts $scope as a parameter which refers to the application/module that controller is to control.The ngModel directive, which implements two-way data binding, is an example of an attribute directive. ngModel modifies the behavior of an existing element (typically an <input>) by setting its display value property and responding to change events.
+
+3) What is a View and how is it defined?
+
+Sol: AngularJS supports Single Page Application via multiple views on a single page. To do this AngularJS has provided ng-view and ng-template directives and $routeProvider services.
+
+ng-view:
+ng-view tag simply creates a place holder where a corresponding view (html or ng-template view) can be placed based on the configuration. 
+
+4) What is used to Bootstrap the application?
+
+Sol: Bootstrapping usually refers to a self-starting process that is supposed to proceed without external input. In computer technology the term (usually shortened to booting) usually refers to the process of loading the basic software into the memory of a computer after power-on or general reset, especially the operating system which will then take care of loading other software as needed.
+
+5) What is the use of System Import?
+
+Sol: You do need the System.import to bootstrap and run the application. It can't run without it, and if it does, you might have a cashed version in the browser. The error: "syntax error: unexpected token <" is usually an indication that some of the script files didn't get loaded correctly, or you have an error that prevented the app compiled JS files from being loaded. Without more information on the error and the output in the console, it's hard to tell what exactly is the problem.
+
+6) What are the Dependency Libraries/Bundles needed for an AngularJS Application?
+
+Sol: npm modules are the dependency libraries and bundles for an angularjs application. We have to install a npm package in our system.Then we have to start a project and then npm install in the project folder to get all the libraries and bundles used for an angularjs application.

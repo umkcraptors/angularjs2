@@ -1,13 +1,13 @@
 <?xml version='1.0'  encoding='UTF-8' ?>
-	<COURSES>
+	
+<COURSES>
 
 	<COURSE>
 		<COURSE_ID>101</COURSE_ID>
 		<COURSE_NAME>Hadoop></COURSE_NAME>
 		<DURATION>30></DURATION>
-          <COURSE_TYPE>Language</COURSE_TYPE>
-
-     </COURSE>
+          	<COURSE_TYPE>Language</COURSE_TYPE>
+     	</COURSE>
 	
 	<COURSE>
 		<COURSE_ID>102></COURSE_ID>
@@ -36,6 +36,7 @@
 		<DURATION><17></DURATION>
 		<COURSE_TYPE><Tool></COURSE_TYPE>
 	</COURSE>
+
 	<COURSE>
 		<COURSE_ID><106></COURSE_ID>
 		<COURSE_NAME><Angularjs></COURSE_NAME>
@@ -50,5 +51,4 @@
 		<COURSE_TYPE><Web></COURSE_TYPE>
 	</COURSE>
 
-
-	</COURSES>
+</COURSES>

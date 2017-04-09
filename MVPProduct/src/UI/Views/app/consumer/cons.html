@@ -1,0 +1,51 @@
+<div class="container">
+    <div>
+         <h3>User Data</h3>
+    </div>
+    <form #userForm="ngForm" (ngSubmit)= "onSubmit(userForm.value)">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" #nameRef required class="form-control" name="Name" [(ngModel)]="myName">
+            <p>{{myName}}</p>
+            <b>{{nameRef.className}}</b>    
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text"  #mailRef="ngModel" required class="form-control" name="Email" ngModel>  
+            <div [hidden]="mailRef.valid || mailRef.pristine" class="alert alert-danger">
+                Enter mail id
+            </div>  
+        </div>
+        <div ngModelGroup="address">
+        <div class="form-group">
+            <label>Sreet</label>
+            <input type="text" class="form-control" name="Street" ngModel>    
+        </div>
+        <div class="form-group">
+            <label>City</label>
+            <input type="text" #cityRef="ngModel" minlength="4" maxlength="10" required class="form-control" name="City" ngModel>    
+            <div *ngIf="cityRef.errors && (cityRef.dirty || cityRef.touched)" class= "alert alert-danger">
+                <div [hidden]="!cityRef.errors.required">
+                    Please Enter a City
+                </div> 
+                <div [hidden]="!cityRef.errors.minlength">
+                    Please Enter atleast 4 Characters
+                </div>
+                <div [hidden]="!cityRef.errors.maxlength">
+                    Please Don't exceed 10 Characters
+                </div>    
+            </div>    
+        </div>
+        <div class="form-group">
+            <label>PostalCode</label>
+            <input type="text" #pinRef="ngModel" pattern="[1-9][0-9]{4}$" class="form-control" name="postalCode" ngModel>    
+            <div *ngIf="pinRef.errors && (pinRef.dirty || pinRef.touched)" class= "alert alert-danger" >
+                <div [hidden]="!pinRef.errors.pattern">
+                    Please Enter a 5 Digit Number
+                </div>
+            </div>
+        </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

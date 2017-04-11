@@ -1,12 +1,17 @@
 package com.businessintelli.mvp.service;
 
 
-import com.businessintelli.mvp.model.*;
-
-import java.io.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Map;
+import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
+
+import com.businessintelli.mvp.model.Consumer;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Service
 public class ConsumerService
@@ -49,10 +54,24 @@ public class ConsumerService
 		return cs2;
 	}
 
-	public boolean update(Consumer consumer) throws Exception {
+	public String update(Consumer consumer) throws IOException  {
+		
+		String consumerStr = consumer.toString();
+		fw.append(consumerStr);
+		return consumerStr;
 		
 		
-		return true;
+		/*
+		Scanner input = new Scanner(new File("Stock.json"));
+	  
+
+	    ObjectMapper mapper = new ObjectMapper();
+	    Map<String,Object> map = mapper.readValue(input, Consumer.class);
+	    }
+		*/
+		
+		
+		
 	}
 		
 	

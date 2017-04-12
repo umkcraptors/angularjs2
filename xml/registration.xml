@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registration>
+<person regid="1">
+<name>Rama Krishna</name>
+<email>rk@gmail.com</email>
+<dob>01-MAR-94</dob>
+<phone>8888888888</phone>
+<employed>yes</employed>
+<sex>Male</sex>
+<experience>2</experience>
+<createdby>Kranthi</createdby>
+</person>
+
+<person regid="2">
+<name>Lasya</name>
+<email>lasya@gmail.com</email>
+<dob>01-JUN-94</dob>
+<phone>8888888888</phone>
+<employed>yes</employed>
+<sex>Female</sex>
+<experience>2</experience>
+<createdby>Kranthi</createdby>
+</person>
+
+<person regid="3">
+<name>Neel</name>
+<email>neel@gmail.com</email>
+<dob>28-MAR-94</dob>
+<phone>8888888888</phone>
+<employed>yes</employed>
+<sex>Male</sex>
+<experience>5</experience>
+<createdby>Kranthi</createdby>
+</person>
+
+<person regid="4">
+<name>Kranthi</name>
+<email>kranthi@gmail.com</email>
+<dob>01-MAR-94</dob>
+<phone>8888888888</phone>
+<employed>no</employed>
+<sex>Male</sex>
+<experience>0</experience>
+<createdby>Kranthi</createdby>
+</person>
+
+<person regid="5">
+<name>Teja</name>
+<email>teju@gmail.com</email>
+<dob>01-MAR-91</dob>
+<phone>8888888888</phone>
+<employed>yes</employed>
+<sex>Male</sex>
+<experience>8</experience>
+<createdby>Kranthi</createdby>
+</person>
+
+<person regid="6">
+<name>Praveen</name>
+<email>praveen@gmail.com</email>
+<dob>11-May-93</dob>
+<phone>8888888888</phone>
+<employed>yes</employed>
+<sex>Male</sex>
+<experience>2</experience>
+<createdby>Kranthi</createdby>
+</person>
+
+<person regid="7">
+<name>Harika</name>
+<email>harika@gmail.com</email>
+<dob>11-May-94</dob>
+<phone>8888888888</phone>
+<employed>yes</employed>
+<sex>Female</sex>
+<experience>2</experience>
+<createdby>RK</createdby>
+</person>
+
+<person regid="8">
+<name>Anand</name>
+<email>anand@gmail.com</email>
+<dob>11-May-88</dob>
+<phone>8888888888</phone>
+<employed>yes</employed>
+<sex>Male</sex>
+<experience>15</experience>
+<createdby>Kranthi</createdby>
+</person>
+
+
+
+
+</registration>

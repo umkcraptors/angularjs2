@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+<xs:schema 
+xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+ <xs:element name="NewDataSet" msdata:IsDataSet="true">
+
+ <xs:complexType>
+
+  <xs:choice maxOccurs="unbounded">
+
+<xs:element name="courses">
+  <xs:complexType>
+      <xs:sequence>
+      <xs:element name="COURSE_ID" type="xs:positiveInteger"/>
+      <xs:element name="COURSE_NAME" type="xs:string"/>
+      <xs:element name="DURATION" type="xs:positiveInteger" minOccurs="0"/>
+      <xs:element name="COURSE_TYPE" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    </xs:complexType>
+    </xs:element>
+
+</xs:choice>
+
+</xs:complexType>
+
+  <xs:key name="NewDataSetKey1" msdata:PrimaryKey="true">
+
+   <xs:selector xpath=".//Courses"/>
+   <xs:field xpath="COURSE_ID"/>
+  </xs:key>
+</xs:element>
+</xs:schema>
+
+

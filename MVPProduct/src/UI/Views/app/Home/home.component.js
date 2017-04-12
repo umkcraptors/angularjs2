@@ -9,19 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_transition_1 = require('../router.transition/router.transition');
 var homeComponent = (function () {
     function homeComponent() {
     }
+    // public imgLink = "http://38.media.tumblr.com/587f48c6548e640f943b7c8c6e3f40de/tumblr_mz8yzmi1XJ1ru39xmo1_500.gif";
     homeComponent.prototype.ngOnInit = function () { };
     homeComponent = __decorate([
         core_1.Component({
             selector: 'home',
-            template: '<h2>Hello!</h2>',
-            styleUrls: ['app/lib/css/styles.css']
+            template: "<h2>Hello!</h2>\n            \n  \n  ",
+            styleUrls: ['app/lib/css/styles.css'],
+            animations: [router_transition_1.slideToRight()],
+            host: { '[@slideToRight]': '' }
         }), 
         __metadata('design:paramtypes', [])
     ], homeComponent);
     return homeComponent;
 }());
 exports.homeComponent = homeComponent;
+//http://lorempixel.com/400/200
+//<img [src] = "imgLink"> 
 //# sourceMappingURL=home.component.js.map

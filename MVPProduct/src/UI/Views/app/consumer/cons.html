@@ -1,51 +1,68 @@
-<div class="container">
-    <div>
-         <h3>User Data</h3>
+<div class="container" >
+    <div style="text-align:left">
+         <h2>Consumer Details :</h2>
     </div>
-    <form #userForm="ngForm" (ngSubmit)= "onSubmit(userForm.value)">
+    <br/>
+    <form #userForm="ngForm" (ngSubmit)= "onSave(userForm.value)">
+        
+        
         <div class="form-group">
-            <label>Name</label>
-            <input type="text" #nameRef required class="form-control" name="Name" [(ngModel)]="myName">
-            <p>{{myName}}</p>
-            <b>{{nameRef.className}}</b>    
-        </div>
+            <label class="neel">Name </label>
+            <span>
+            <input  style="border-radius:3px" type="text" required placeholder=" First Name" #nameRef="ngModel" name="Name" ngModel><span style="color:red">*</span> &nbsp;
+            <input style="border-radius:3px" type="text"  placeholder=" Middle Name" name="Name" ngModel> &nbsp;
+            <input style="border-radius:3px" type="text" required placeholder=" Last Name" #nameRef="ngModel" name="Name" ngModel><span style="color:red">*</span>
+            </span>
+            <span *ngIf= "nameRef.touched && nameRef.errors">
+                <span [hidden]="!nameRef.errors.required">
+                    This field cannot be blank
+                </span>
+            </span>    
+        </div> 
+
         <div class="form-group">
-            <label>Email</label>
-            <input type="text"  #mailRef="ngModel" required class="form-control" name="Email" ngModel>  
-            <div [hidden]="mailRef.valid || mailRef.pristine" class="alert alert-danger">
-                Enter mail id
-            </div>  
+            <label class="neel">Email </label>
+            <input class="neel" type="text" style="border-radius:3px;width: 550px" #mailRef="ngModel" pattern="^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" required 
+            placeholder="Mail Address" name="Email" ngModel>  <span style="color:red">*</span>
+            <span *ngIf= mailRef.touched>
+           <!--"mailRef.errors && (mailRef.dirty || mailRef.touched)"
+           "phRef.errors && (phRef.dirty || phRef.touched)"-->
+                
+                <span [hidden]="!mailRef.errors.required">
+                    Please enter your email ID
+                </span>
+                 <span [hidden]="!mailRef.errors.pattern">
+                    This doesn't look like a valid email ID
+                </span>
+            </span>
         </div>
-        <div ngModelGroup="address">
+
         <div class="form-group">
-            <label>Sreet</label>
-            <input type="text" class="form-control" name="Street" ngModel>    
+            <label class="neel">Phone </label>
+            <input type="text" #phRef="ngModel" pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}$"placeholder="Phone Number" style="width: 545px; border-radius:3px " required name="Phone" ngModel><span style="color:red">*</span>
+            <span *ngIf= phRef.touched>
+                <span [hidden]="!phRef.errors.required">
+                    Please Enter your phone number
+                </span>
+                 <span [hidden]="!phRef.errors.pattern">
+                    Please enter a valid 10 digit Phone number
+                </span>
+            </span>    
         </div>
+        <div class="forms-group">
+           <label class="neel"> Status </label>
+           <select name="Status" style="width: 150px;border-radius:3px;">
+                <option value="1">Active</option>
+                <option value="0">Inactive</option>
+           </select> 
+        </div>
+        <br/>
         <div class="form-group">
-            <label>City</label>
-            <input type="text" #cityRef="ngModel" minlength="4" maxlength="10" required class="form-control" name="City" ngModel>    
-            <div *ngIf="cityRef.errors && (cityRef.dirty || cityRef.touched)" class= "alert alert-danger">
-                <div [hidden]="!cityRef.errors.required">
-                    Please Enter a City
-                </div> 
-                <div [hidden]="!cityRef.errors.minlength">
-                    Please Enter atleast 4 Characters
-                </div>
-                <div [hidden]="!cityRef.errors.maxlength">
-                    Please Don't exceed 10 Characters
-                </div>    
-            </div>    
+            <label class="neel">Handle </label>
+            <input type="text" required placeholder="Consumer unique id " name="Handle" style="width: 545px;border-radius:3px" ngModel>    
         </div>
-        <div class="form-group">
-            <label>PostalCode</label>
-            <input type="text" #pinRef="ngModel" pattern="[1-9][0-9]{4}$" class="form-control" name="postalCode" ngModel>    
-            <div *ngIf="pinRef.errors && (pinRef.dirty || pinRef.touched)" class= "alert alert-danger" >
-                <div [hidden]="!pinRef.errors.pattern">
-                    Please Enter a 5 Digit Number
-                </div>
-            </div>
-        </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</div>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="reset" class="btn btn-primary">Cancel</button>
+        <button (click)= "gotoDepartments()" > Home</button>
+        </form>
+</div> 

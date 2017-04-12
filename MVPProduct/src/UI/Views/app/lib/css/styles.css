@@ -1,4 +1,6 @@
 /*app.component.ts style sheet*/
+
+
 h1 {
     color:#cfd8dc;
     background-color:black;
@@ -17,6 +19,28 @@ h2 {
     color:#333;
 }
 
+
+img {
+    
+    margin-left: 25px;
+    margin-right: 16px;
+    width: 95%;
+    height: 68%;
+    
+    opacity: 0.9;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+
+    
+}
+.neel 
+    {
+        font-family: Helvetica;
+     margin: 0 0 2em 0;
+     list-style-type: none;
+     padding-left: 0;
+     width: 3.5em;
+     border-top-right-radius: 5px;
+    }
 
 
 

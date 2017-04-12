@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var common_1 = require('@angular/common');
 var forms_1 = require('@angular/forms');
+var app_routes_1 = require('./routes/app.routes');
 var app_component_1 = require('./app.component');
 var header_1 = require('../app/header/header');
 var marketer_component_1 = require('../app/marketer/marketer.component');
@@ -21,7 +22,7 @@ var product_component_1 = require('../app/product/product.component');
 var supplier_product_component_1 = require('../app/supplier_product/supplier_product.component');
 var marketer_product_component_1 = require('../app/marketer_product/marketer_product.component');
 var home_component_1 = require('../app/Home/home.component');
-var app_routes_1 = require('./routes/app.routes');
+//import { routerTransition } from '../app/router.transition/router.transition';
 var AppModule = (function () {
     function AppModule() {
     }

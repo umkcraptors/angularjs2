@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_transition_1 = require('../router.transition/router.transition');
 var marketerComponent = (function () {
     function marketerComponent() {
     }
@@ -17,7 +18,9 @@ var marketerComponent = (function () {
         core_1.Component({
             selector: 'marketer',
             template: '<h2>Marketer</h2>',
-            styleUrls: ['app/lib/css/styles.css']
+            styleUrls: ['app/lib/css/styles.css'],
+            animations: [router_transition_1.routerTransition()],
+            host: { '[@routerTransition]': '' }
         }), 
         __metadata('design:paramtypes', [])
     ], marketerComponent);

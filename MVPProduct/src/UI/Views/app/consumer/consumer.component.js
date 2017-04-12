@@ -9,17 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var router_transition_1 = require('../router.transition/router.transition');
 var consumerComponent = (function () {
-    function consumerComponent() {
+    function consumerComponent(router) {
+        this.router = router;
     }
     consumerComponent.prototype.ngOnInit = function () { };
+    consumerComponent.prototype.onSave = function (value) {
+        alert("In Progress");
+    };
+    consumerComponent.prototype.gotoDepartments = function () {
+        this.router.navigate(['']);
+    };
     consumerComponent = __decorate([
         core_1.Component({
             selector: 'consumer',
             templateUrl: 'app/consumer/cons.html',
-            styleUrls: ['app/lib/css/styles.css']
+            styleUrls: ['app/lib/css/styles.css'],
+            styles: ["input.ng-valid{border-left:5px solid green}\n            input.ng-invalid{border-left:5px solid red}"],
+            animations: [router_transition_1.routerTransition()],
+            host: { '[@routerTransition]': '' }
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], consumerComponent);
     return consumerComponent;
 }());

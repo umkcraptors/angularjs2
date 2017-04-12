@@ -15,7 +15,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n   <header></header>\n <ul >\n       <li><a routerLink=\"/\" >Home</a></li>\n       <li><a routerLink=\"/consumer\" routerLinkActive=\"active\">Consumers</a></li>\n       <li> <a routerLink='/supplier' routerLinkActive=\"active\">Suppliers</a> </li>\n       <li><a routerLink=\"/marketer\" routerLinkActive=\"active\">Marketer</a></li>\n       <li><a routerLink=\"/product\" routerLinkActive=\"active\">Products</a></li>\n       <li><a routerLink=\"/supplierP\" routerLinkActive=\"active\">Supplier products</a></li>\n       <li><a routerLink=\"/marketerP\" routerLinkActive=\"active\">Marketer products</a></li>\n  </ul>\n  <router-outlet></router-outlet>\n  ",
+            template: "\n   <header></header>\n <ul >\n       <li><a routerLink=\"/home\" routerLinkActive=\"active\">Home</a></li>\n       <li><a routerLink=\"/consumer\" routerLinkActive=\"active\">Consumers</a></li>\n       <li> <a routerLink=\"/supplier\" routerLinkActive=\"active\">Suppliers</a> </li>\n       <li><a routerLink=\"/marketer\" routerLinkActive=\"active\">Marketer</a></li>\n       <li><a routerLink=\"/product\" routerLinkActive=\"active\">Products</a></li>\n       <li><a routerLink=\"/supplierP\" routerLinkActive=\"active\">Supplier products</a></li>\n       <li><a routerLink=\"/marketerP\" routerLinkActive=\"active\">Marketer products</a></li>\n  </ul>\n  <router-outlet></router-outlet>\n \n  ",
             styleUrls: ['app/lib/css/styles.css']
         }), 
         __metadata('design:paramtypes', [])
@@ -23,4 +23,5 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
+//<home [@routerTransition]=""></home> 
 //# sourceMappingURL=app.component.js.map

@@ -8,7 +8,8 @@ var supplier_product_component_1 = require('../supplier_product/supplier_product
 var marketer_product_component_1 = require('../marketer_product/marketer_product.component');
 var home_component_1 = require('../Home/home.component');
 var appRoutes = [
-    { path: '', component: home_component_1.homeComponent },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'home', component: home_component_1.homeComponent },
     { path: 'consumer', component: consumer_component_1.consumerComponent },
     { path: 'supplier', component: supplier_component_1.supplierComponent },
     { path: 'marketer', component: marketer_component_1.marketerComponent },
@@ -17,5 +18,7 @@ var appRoutes = [
     { path: 'marketerP', component: marketer_product_component_1.marketerPComponent }
 ];
 exports.appRoutingProviders = [];
-exports.routing = router_1.RouterModule.forRoot(appRoutes);
+exports.routing = router_1.RouterModule.forRoot(appRoutes, {
+    useHash: true
+});
 //# sourceMappingURL=app.routes.js.map

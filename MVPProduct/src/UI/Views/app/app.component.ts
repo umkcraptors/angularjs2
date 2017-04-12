@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
 import { routerTransition } from '../app/router.transition/router.transition';
+import { ConsumerService } from './Service/Services';
 @Component({
   selector: 'my-app',
   template: `
@@ -17,7 +18,8 @@ import { routerTransition } from '../app/router.transition/router.transition';
   <router-outlet></router-outlet>
  
   `,
-    styleUrls: ['app/lib/css/styles.css']
+    styleUrls: ['app/lib/css/styles.css'],
+    providers: [ConsumerService]
   
 })
 export class AppComponent { 

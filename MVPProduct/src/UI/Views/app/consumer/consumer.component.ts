@@ -1,9 +1,11 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { Router } from '@angular/router';
 import { routerTransition } from '../router.transition/router.transition';
+import { ConsumerService } from '../Service/Services';
 @Component({
   selector: 'consumer',
   templateUrl: 'app/consumer/cons.html',
+ 
  
   
   styleUrls: ['app/lib/css/styles.css'],
@@ -13,9 +15,15 @@ import { routerTransition } from '../router.transition/router.transition';
             host: {'[@routerTransition]': ''}
 })
 export class consumerComponent implements OnInit {
-    constructor( private router: Router) { }
+   consumers: any;
+   errorMsg: string;
+    constructor( private router: Router, private _consumerService: ConsumerService) { }
 
-    ngOnInit() { }
+    ngOnInit() { 
+       this._consumerService.getConsumers()
+     .subscribe(resConsumerData => this.consumers = JSON.stringify(resConsumerData),
+     resConsumerError => this.errorMsg = resConsumerError);
+    }
 
     private onSave(value:any){
       alert("In Progress");
@@ -26,3 +34,13 @@ export class consumerComponent implements OnInit {
        }
 
 }
+
+ /* consumers: any;
+  errorMsg: string;
+    constructor(private _consumerService: ConsumerService){}
+        ngOnInit(){
+     this._consumerService.getConsumers()
+     .subscribe(resConsumerData => this.consumers = JSON.stringify(resConsumerData),
+     resConsumerError => this.errorMsg = resConsumerError);
+        }
+        */

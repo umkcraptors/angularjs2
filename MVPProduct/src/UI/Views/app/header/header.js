@@ -8,20 +8,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 var headerComponent = (function () {
     function headerComponent() {
     }
     headerComponent.prototype.ngOnInit = function () { };
-    headerComponent = __decorate([
-        core_1.Component({
-            selector: 'header',
-            template: '<h1>MVP Prototype</h1>',
-            styleUrls: ['app/lib/css/styles.css']
-        }), 
-        __metadata('design:paramtypes', [])
-    ], headerComponent);
     return headerComponent;
 }());
+headerComponent = __decorate([
+    core_1.Component({
+        selector: 'header',
+        template: '<h1>MVP Prototype</h1>',
+        styleUrls: ['app/lib/css/styles.css']
+    }),
+    __metadata("design:paramtypes", [])
+], headerComponent);
 exports.headerComponent = headerComponent;
 //# sourceMappingURL=header.js.map

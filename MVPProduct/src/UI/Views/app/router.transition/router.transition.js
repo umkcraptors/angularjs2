@@ -1,5 +1,6 @@
 "use strict";
-var core_1 = require('@angular/core');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 function routerTransition() {
     return slideToLeft();
 }

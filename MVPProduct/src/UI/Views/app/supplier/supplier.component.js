@@ -8,25 +8,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_transition_1 = require('../router.transition/router.transition');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var router_transition_1 = require("../router.transition/router.transition");
 var supplierComponent = (function () {
     function supplierComponent() {
         this.user = { Name: null, Email: null, Phone: null, Status: null };
     }
     supplierComponent.prototype.ngOnInit = function () { };
-    supplierComponent = __decorate([
-        core_1.Component({
-            selector: 'supplier',
-            template: '<h2>Supplier</h2>',
-            //templateUrl: 'app/supplier/Supplier.html',
-            styleUrls: ['app/lib/css/styles.css'],
-            animations: [router_transition_1.routerTransition()],
-            host: { '[@routerTransition]': '' }
-        }), 
-        __metadata('design:paramtypes', [])
-    ], supplierComponent);
     return supplierComponent;
 }());
+supplierComponent = __decorate([
+    core_1.Component({
+        selector: 'supplier',
+        template: '<h2>Supplier</h2>',
+        //templateUrl: 'app/supplier/Supplier.html',
+        styleUrls: ['app/lib/css/styles.css'],
+        animations: [router_transition_1.routerTransition()],
+        host: { '[@routerTransition]': '' }
+    }),
+    __metadata("design:paramtypes", [])
+], supplierComponent);
 exports.supplierComponent = supplierComponent;
 //# sourceMappingURL=supplier.component.js.map

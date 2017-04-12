@@ -22,6 +22,7 @@ public class ConsumerServiceController
 	@RequestMapping( method = RequestMethod.GET)
 	public @ResponseBody Consumer getConsumer(int consumerId) 
 	{
+
 		return service.retrive(consumerId);
 	}
 }

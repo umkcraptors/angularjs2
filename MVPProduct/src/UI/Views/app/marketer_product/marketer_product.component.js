@@ -8,21 +8,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
 var marketerPComponent = (function () {
     function marketerPComponent() {
     }
     marketerPComponent.prototype.ngOnInit = function () { };
+    marketerPComponent = __decorate([
+        core_1.Component({
+            selector: 'marketerP',
+            template: '<h2>Marketer product</h2>',
+            styleUrls: ['app/lib/css/styles.css']
+        }), 
+        __metadata('design:paramtypes', [])
+    ], marketerPComponent);
     return marketerPComponent;
 }());
-marketerPComponent = __decorate([
-    core_1.Component({
-        selector: 'marketerP',
-        template: '<h2>Marketer product</h2>',
-        styleUrls: ['app/lib/css/styles.css']
-    }),
-    __metadata("design:paramtypes", [])
-], marketerPComponent);
 exports.marketerPComponent = marketerPComponent;
 //# sourceMappingURL=marketer_product.component.js.map

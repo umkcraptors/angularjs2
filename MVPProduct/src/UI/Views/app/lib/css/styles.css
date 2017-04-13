@@ -44,7 +44,7 @@ img {
 
 
 
-ul {
+#menu {
     font-family:  Helvetica;
     list-style-type: none;
     margin: 0;
@@ -53,11 +53,11 @@ ul {
     background-color: #333;
 }
 
-li {
+#lis {
     float: left;
 }
 
-li a {
+#lis a {
     display: block;
     color: white;
     text-align: center;
@@ -65,11 +65,11 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+#lis a:hover {
     background-color: #111;
 }
 
-li a.active { 
+#lis a.active { 
    color: #eee;
    background-color:grey;
 

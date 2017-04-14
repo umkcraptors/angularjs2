@@ -24,10 +24,16 @@ public class ConsumerServiceController
 	public @ResponseBody Consumer getConsumer(int consumerId) 
 	{
 
-		return service.retrive(consumerId);
+		try {
+			return service.retrive(consumerId);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 	
-	@RequestMapping( value = "/welcome/profile",method = RequestMethod.POST)
+	@RequestMapping( value = "/create",method = RequestMethod.POST)
 	public @ResponseBody int create (@RequestBody Consumer consumer)
 	{
 		logger.info("New user created with :");
@@ -37,7 +43,7 @@ public class ConsumerServiceController
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return 1;
+		return 0;
 	}
 	}
 	/*public @ResponseBody String updateConsumer(@RequestBody Consumer consumer) 

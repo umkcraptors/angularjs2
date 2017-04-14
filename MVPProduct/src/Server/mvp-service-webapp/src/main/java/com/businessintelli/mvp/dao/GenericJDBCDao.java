@@ -39,7 +39,7 @@ public class GenericJDBCDao
 
 		try {
 
-			connection = DriverManager.getConnection("jdbc:oracle:thin:@bizintelli.ckhkrxleqe3b.us-west-2.rds.amazonaws.com:1521:xe", "bizintelli", "Secbad2Iselin");
+			connection = DriverManager.getConnection("jdbc:oracle:thin:@bizintelli.ckhkrxleqe3b.us-west-2.rds.amazonaws.com:1521:ORCL", "bizintelli", "Secbad2Iselin");
 
 		} catch (Exception e) {
 

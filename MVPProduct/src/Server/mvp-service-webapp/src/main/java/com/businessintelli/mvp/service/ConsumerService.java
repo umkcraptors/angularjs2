@@ -18,6 +18,16 @@ public class ConsumerService
 	@Autowired
 	ConsumerDAO consumerDao;
 	
+	
+	
+	public ConsumerDAO getConsumerDao() {
+		return consumerDao;
+	}
+
+	public void setConsumerDao(ConsumerDAO consumerDao) {
+		this.consumerDao = consumerDao;
+	}
+
 	public ConsumerService()
 	{
 		

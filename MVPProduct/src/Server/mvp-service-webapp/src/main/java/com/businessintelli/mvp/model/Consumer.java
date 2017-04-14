@@ -13,7 +13,7 @@
 		private String plastName;
 		private String pEmail;
 		private String pPhone;
-		private Boolean pStatus;
+		private String pStatus;
 		private String pHandle;
 		private int pId;
 
@@ -57,11 +57,11 @@
 			this.pPhone = value;
 		}
 
-		public Boolean getStatus() {
+		public String getStatus() {
 			return pStatus;
 		}
 
-		public void setStatus(Boolean value) {
+		public void setStatus(String value) {
 			this.pStatus = value;
 		}
 

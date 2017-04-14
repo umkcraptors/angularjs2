@@ -11,11 +11,14 @@ import { marketerPComponent } from '../marketer_product/marketer_product.compone
 import { homeComponent } from '../Home/home.component';
 import { routerTransition } from '../router.transition/router.transition';
 import { slideToRight } from '../router.transition/router.transition';
+import { SearchComponent } from "../search/search.component";
+
 //import { EmployeeService } from '../Service/Services';
 const appRoutes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: homeComponent },
     { path: 'consumer', component: consumerComponent },
+     { path: 'search', component: SearchComponent },
     { path: 'supplier', component: supplierComponent },
     { path: 'marketer', component: marketerComponent },
     { path: 'product', component: productComponent },

@@ -14,6 +14,7 @@ import { ConsumerService } from './Service/Services';
        <li id="lis"><a routerLink="/product" routerLinkActive="active">Products</a></li>
        <li id="lis"><a routerLink="/supplierP" routerLinkActive="active">Supplier products</a></li>
        <li id="lis"><a routerLink="/marketerP" routerLinkActive="active">Marketer products</a></li>
+         <li id="lis"><a routerLink="/search" routerLinkActive="active">Search</a></li>
   </ul>
   <router-outlet></router-outlet>
  

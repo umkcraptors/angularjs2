@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+C:\AngularGIT\MVPProduct\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+973857255.index
+286927354.index
+1757036775.index
+3715809312.index
+425511866.index
+3961975897.index

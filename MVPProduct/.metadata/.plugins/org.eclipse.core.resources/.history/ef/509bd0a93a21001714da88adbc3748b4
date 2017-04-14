@@ -1,0 +1,105 @@
+package com.businessintelli.mvp.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.businessintelli.mvp.controller.ConsumerServiceController;
+import com.businessintelli.mvp.model.Consumer;
+import org.apache.log4j.Logger;
+
+@Repository
+public class ConsumerDAO 
+{
+	
+	@Autowired
+	GenericJDBCDao genericDao;
+	
+	final static Logger logger = Logger.getLogger(ConsumerDAO.class);
+	
+	
+	public ConsumerDAO()
+	{
+		
+	}
+	
+	public int createConsumer(Consumer consumer) throws SQLException
+	{
+		genericDao.openConnection();
+		String insertSQL = "";
+		Connection con = genericDao.getConnection();
+		PreparedStatement pStmt = con.prepareStatement(insertSQL);
+		//TODO add params
+		
+		pStmt.executeUpdate();
+		pStmt.close();
+		return 1; //TODO add try catch and throw and add finally close
+	}
+
+	/**
+	 * 
+	 * @param pid
+	 * @return
+	 * @throws SQLException
+	 */
+	public Consumer retrieveConsumer(int pid) throws SQLException
+	{
+
+		genericDao.openConnection();
+		Connection dbConnection = null;
+		PreparedStatement preparedStatement = null;
+
+		String selectSQL = "SELECT CONSUMER_ID, CONSUMER_FIRSTNAME, CONSUMER_MIDDLENAME, "
+				+ "CONSUMER_LASTNAME, CONSUMER_EMAIL, CONSUMER_PHONE, CONSUMER_STATUS, "
+				+ "CONSUMER_HANDLE FROM CONSUMER WHERE CONSUMER_ID = ?";
+
+		try {
+			dbConnection = genericDao.getConnection();
+			preparedStatement = dbConnection.prepareStatement(selectSQL);
+			preparedStatement.setInt(1, pid);
+
+			// execute select SQL stetement
+			ResultSet rs = preparedStatement.executeQuery();
+
+			while (rs.next()) 
+			{
+
+				String consumerid = rs.getString("CONSUMER_ID");
+				String consumerFirstname = rs.getString("CONSUMER_FIRSTNAME");
+				//String consumerEmail = rs.getString("CONSUMER_EMAIL");
+
+				Consumer c = new Consumer();
+				c.set(consumerid);
+				c.setfirstName(consumerFirstname);
+				c.setEmail(rs.getString("CONSUMER_MIDDLENAME"));
+				c.setPhone(rs.getString("CONSUMER_LASTNAME"));
+				c.setlastName(rs.getString("CONSUMER_EMAIL"));
+				c.setlastName(rs.getString("CONSUMER_PHONE"));
+				c.setlastName(rs.getString("CONSUMER_STATUS"));
+				c.setlastName(rs.getString("CONSUMER_HANDLE"));
+				
+				logger.info("Retrieving consumer.." + c.toString() );
+				return c;
+
+			}
+
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+			throw e;
+
+		} finally {
+
+			if (preparedStatement != null) {
+				preparedStatement.close();
+			}
+			genericDao.closeConnection();
+		}
+		return null;
+
+	}
+}

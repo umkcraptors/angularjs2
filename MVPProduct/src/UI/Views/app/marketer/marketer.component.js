@@ -8,24 +8,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var router_transition_1 = require("../router.transition/router.transition");
+//import { EmployeeService } from './Service.Services';
+var core_1 = require('@angular/core');
+var router_transition_1 = require('../router.transition/router.transition');
 var marketerComponent = (function () {
     function marketerComponent() {
     }
     marketerComponent.prototype.ngOnInit = function () { };
+    marketerComponent = __decorate([
+        core_1.Component({
+            selector: 'marketer',
+            template: '<h2>Marketer</h2>',
+            styleUrls: ['app/lib/css/styles.css'],
+            animations: [router_transition_1.routerTransition()],
+            host: { '[@routerTransition]': '' }
+        }), 
+        __metadata('design:paramtypes', [])
+    ], marketerComponent);
     return marketerComponent;
 }());
-marketerComponent = __decorate([
-    core_1.Component({
-        selector: 'marketer',
-        template: '<h2>Marketer</h2>',
-        styleUrls: ['app/lib/css/styles.css'],
-        animations: [router_transition_1.routerTransition()],
-        host: { '[@routerTransition]': '' }
-    }),
-    __metadata("design:paramtypes", [])
-], marketerComponent);
 exports.marketerComponent = marketerComponent;
 //# sourceMappingURL=marketer.component.js.map

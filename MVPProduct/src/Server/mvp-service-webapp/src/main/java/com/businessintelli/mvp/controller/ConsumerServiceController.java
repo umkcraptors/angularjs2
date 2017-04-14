@@ -27,8 +27,20 @@ public class ConsumerServiceController
 		return service.retrive(consumerId);
 	}
 	
-	@RequestMapping( method = RequestMethod.POST)
-	public @ResponseBody String updateConsumer(@RequestBody Consumer consumer) 
+	@RequestMapping( value = "/welcome/profile",method = RequestMethod.POST)
+	public @ResponseBody int create (@RequestBody Consumer consumer)
+	{
+		logger.info("New user created with :");
+		try {
+			return service.create(consumer);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 1;
+	}
+	}
+	/*public @ResponseBody String updateConsumer(@RequestBody Consumer consumer) 
 	{
 		logger.info("Started Update");
 		try {
@@ -39,4 +51,4 @@ public class ConsumerServiceController
 		}
 		return "";
 	}
-}
+}*/

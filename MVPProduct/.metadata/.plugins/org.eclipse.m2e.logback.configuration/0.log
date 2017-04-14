@@ -1,0 +1,15 @@
+2017-04-13 13:46:45,457 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.businessintelli.mvp:mvp-service-webapp:0.0.1-SNAPSHOT @ C:\angulargit\MVPProduct\src\Server\mvp-service-webapp\pom.xml.
+2017-04-13 13:46:45,457 [Worker-9] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.businessintelli.mvp:mvp-service-webapp:0.0.1-SNAPSHOT @ C:\angulargit\MVPProduct\src\Server\mvp-service-webapp\pom.xml.
+2017-04-13 13:46:48,886 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-04-13 13:46:48,896 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-04-13 13:46:48,910 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-04-13 13:46:48,911 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\angulargit\MVPProduct\src\Server\mvp-service-webapp\src\test\resources
+2017-04-13 13:46:51,905 [Worker-13] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.businessintelli.mvp:mvp-service-webapp:0.0.1-SNAPSHOT @ C:\angulargit\MVPProduct\src\Server\mvp-service-webapp\pom.xml.
+2017-04-13 13:46:52,164 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-04-13 13:46:52,176 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-04-13 13:46:52,187 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-04-13 13:46:52,188 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\angulargit\MVPProduct\src\Server\mvp-service-webapp\src\test\resources
+2017-04-13 13:46:53,629 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-04-13 13:46:53,669 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-04-13 13:46:53,671 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-04-13 13:46:53,672 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\angulargit\MVPProduct\src\Server\mvp-service-webapp\src\test\resources

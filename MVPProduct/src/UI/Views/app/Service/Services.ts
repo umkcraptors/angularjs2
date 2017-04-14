@@ -7,7 +7,7 @@ import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class ConsumerService{
-    private _url: string = "http://192.168.1.128:8090/mvp-service-webapp/getConsumer?consumerId=1";
+    private _url: string = "http://192.168.1.128:8090/mvp-service-webapp/getConsumer?consumerId=1 ";
     constructor(private _http: Http) {}
 
     getConsumers(){
@@ -20,3 +20,4 @@ export class ConsumerService{
         return Observable.throw("Server not found");
     }
 }
+//http://192.168.1.128:8090/mvp-service-webapp/getConsumer?consumerId=1

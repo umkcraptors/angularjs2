@@ -12,7 +12,7 @@ import { ConsumerService } from '../Service/Services';
   styles: [`input.ng-valid{border-left:5px solid green}
             input.ng-invalid{border-left:5px solid red}`],
             animations: [routerTransition()],
-            host: {'[@routerTransition]': ''}
+            host: {'[@routerTransition]': ''} 
 })
 export class consumerComponent implements OnInit {
    consumers: any;
@@ -21,7 +21,7 @@ export class consumerComponent implements OnInit {
 
     ngOnInit() { 
        this._consumerService.getConsumers()
-     .subscribe(resConsumerData => this.consumers = JSON.stringify(resConsumerData),
+     .subscribe(resConsumerData => this.consumers = (resConsumerData),
      resConsumerError => this.errorMsg = resConsumerError);
     }
 
@@ -43,4 +43,5 @@ export class consumerComponent implements OnInit {
      .subscribe(resConsumerData => this.consumers = JSON.stringify(resConsumerData),
      resConsumerError => this.errorMsg = resConsumerError);
         }
+        JSON.stringify
         */
